@@ -1,0 +1,10 @@
+tensorflow==1.13.1
+pandas 
+tqdm
+pillow
+humanfriendly
+matplotlib
+tqdm
+jsonpickle
+statistics
+requests

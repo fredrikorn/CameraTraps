@@ -1,0 +1,1 @@
+echo. && echo DOWNLOADING MEGADETECTOR FILE:
