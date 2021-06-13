@@ -7,7 +7,7 @@ import pandas as pd
 from pandas import DataFrame
 
 #### GLOBAL CONSTANTS, CHANGE IF YOU CHANGE FOLDER NAMES #####
-IMG_FOLDER = "test_images"
+IMG_FOLDER = "test_images/"
 MD_OUTPUT = "some_output_file.json"
 OUTPUT_FOLDER = "output/"
 TH = 0.8
@@ -139,6 +139,30 @@ def main():
 
     animal_df.to_excel(OUTPUT_FOLDER+'wildlife.xlsx', sheet_name='sheet1', index=False)
     human_df.to_excel(OUTPUT_FOLDER+'people.xlsx', sheet_name='sheet1', index=False)
+    #endregion
+
+    #region
+    ##### Moving images to output-folders
+    # Could switch to using shutil.copy if you want to keep to original folder
+    if not os.path.exists(OUTPUT_FOLDER+'Empty'):
+        os.makedirs(OUTPUT_FOLDER+'Empty')
+
+    if not os.path.exists(OUTPUT_FOLDER+'Animal'):
+        os.makedirs(OUTPUT_FOLDER+'Animal')
+        
+    if not os.path.exists(OUTPUT_FOLDER+'Human'):
+        os.makedirs(OUTPUT_FOLDER+'Human')
+
+    for filename in animal_filenames:
+        shutil.move(IMG_FOLDER+filename, OUTPUT_FOLDER+'Animal/'+filename)
+        
+    for filename in human_filenames:
+        shutil.move(IMG_FOLDER+filename, OUTPUT_FOLDER+'Human/'+filename)
+
+    for filename in os.listdir(IMG_FOLDER):
+        shutil.move(IMG_FOLDER+filename, OUTPUT_FOLDER+'Empty/'+filename)
+# Could add dog-folder
+
     #endregion
 
 if __name__ == '__main__':
