@@ -33,5 +33,6 @@ api_config*.py
 *.o
 debug.log
 
-# Images
+# Images and output
 images/
+output/
