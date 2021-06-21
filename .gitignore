@@ -32,3 +32,6 @@ api_config*.py
 *.pth
 *.o
 debug.log
+
+# Images
+images/
