@@ -10,18 +10,20 @@ For ECN's use of this repository, the best choice is to use Microsoft's MegaDete
 For ECN to get this output
 1. Download [Anaconda](https://www.anaconda.com/products/individual) and [git](https://git-scm.com/downloads)
 2. Open an **Anaconda prompt** and type the following commands:
-```
+    ```
     mkdir c:\git
     cd c:\git
     git clone https://github.com/fredrikorn/CameraTraps.git
     git clone https://github.com/Microsoft/ai4eutils
-```
+    ```
     These two repos are needed to use MegaDetector, but they also contain other useful tools, described the [CameraTraps-folder](/CameraTraps).
+    
 3. Download the [MegaDetector model file](https://lilablobssc.blob.core.windows.net/models/camera_traps/megadetector/md_v4.1.0/md_v4.1.0.pb) and put it in the folder. Cicking the link will download version 4.1.0, which I used, but you could also check for updated versions.
 4. Create an **Anaconda environment** named *cameratraps-detector* by typing:
-```
+    ```
     conda env create --file environment-detector.yml
-```
+    ```
     This environment will contain the packages needed. Here, ordinarey tensorflow is used, but if you have a CUDA-compatible gpu on your computer you will probably want to change to the gpu-version.
+    
 5. Activate the environment by typing 'conda activate cameratraps-detector'
 6. Type `run.cmd`. This will
