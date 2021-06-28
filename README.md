@@ -26,4 +26,6 @@ For ECN to get this output
     This environment will contain the packages needed. Here, ordinarey tensorflow is used, but if you have a CUDA-compatible gpu on your computer you will probably want to change to the gpu-version.
     
 5. Activate the environment by typing 'conda activate cameratraps-detector'
-6. Type `run.cmd`. This will
+6. Type `run.cmd`. This will execute multiple commands and each could be run separately as well.
+
+Done! Sorted images and excel spreadsheets will be in the output-folder.
